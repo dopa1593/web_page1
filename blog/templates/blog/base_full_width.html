@@ -1,0 +1,27 @@
+<!--blog/templates/blog/post_list.html-->
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <title>{% block head_title %}Blog{% endblock %}</title>
+        <script src="./what_time_is_it.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    </head>
+    <body>
+    {% include 'blog/navbar.html' %}
+
+
+        <div class="container my-3">
+          <div class="row">
+            <div class="col-12" id="main-area">
+              {% block main_area %}
+              {% endblock %}
+            </div>
+          </div> 
+        </div>
+
+        <!-- Footer-->
+    {% include 'blog/footer.html' %}
+    </body>
+</html>
