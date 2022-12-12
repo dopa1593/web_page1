@@ -95,11 +95,12 @@
                                 {% endif %}
 
                         {% if post.comment_set.exists %}
+                        <br>
                             {% for comment in post.comment_set.iterator %}
                                 <!-- Single comment-->
                                 <div class="d-flex">
                                     <div class="flex-shrink-0" id="comment-{{ comment.pk }}">
-                                        <img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                        <img class="rounded-circle" src="{{comment.get_avatar_url}}" alt="{{comment.author}}" widht="60px" /></div>
                                     <div class="ms-3">
                                         {% if user.is_authenticated and comment.author == user %}
                                         <div class="float-right">
