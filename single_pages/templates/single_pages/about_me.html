@@ -1,17 +1,153 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>개발자 달타냥입니다!</title>
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
 </head>
 <body>
-<nav>
-  <a href="/blog/">Blog</a>
-  <a href="/about_me/">About me</a>
-</nav>
+{% include 'blog/navbar.html' %}
 
-<h1>안녕하세요. 달타냥입니다.</h1>
-<h2>Portfolio</h2>
-<h3>아직 공사중입니다.</h3>
+<section>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>안녕하세요 달타냥입니다.</h1>
+        <br>
+        <p class="lead">농구와 게임을 좋아합니다.</p>
+        <ul>
+          <li>사용언어</li>
+          <ul>
+            <li>HTML</li>
+            <li>python</li>
+            <li>C++</li>
+
+          </ul>
+
+          <li>프로젝트</li>
+          <ul>
+            <li>숫자야구</li>
+            <li>Django 웹 페이지 개발</li>
+            <li>FLASK 웹 페이지 개발</li>
+
+          </ul>
+
+          <li>교육</li>
+          <ul>
+            <li>MIT 능력개발원 파이썬 웹 클라우드기반</li>
+
+          </ul>
+        </ul>
+      
+      </div>
+      <div class="col-lg-4">
+        <img class="img-fluid" src="{% static 'single_pages/image/human.jpg' %}">
+      </div>
+    </div> 
+  </div>
+</section>
+
+<section class="bg-light margin-for-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>PORTFOLIO </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card" data-toggle="modal" data-target="#a">
+          <img class="card-img-top" src="{% static '/single_pages/image/pa.jpg' %}">
+          <div class="card-body">
+            <h5 class="card-title">숫자야구</h5>
+
+            <p>보드게임 숫자야구를 모바일로 제작</p>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-lg-4">
+          <div class="card" data-toggle="modal" data-target="#b">
+            <img class="card-img-top" src="{% static '/single_pages/image/pb.jpg' %}">
+            <div class="card-body">
+              <h5 class="card-title">Django 웹 페이지</h5>
+
+              <p>지금 이 페이지</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-4">
+          <div class="card" data-toggle="modal" data-target="#c">
+            <img class="card-img-top" src="{% static '/single_pages/image/pc.jpg' %}">
+            <div class="card-body">
+              <h5 class="card-title">FLASK 웹 페이지</h5>
+
+              <p>쇼핑몰 사이트를 개발함</p>
+            </div>
+          </div>
+        </div>
+
+
+    
+
+      </div>
+</section>
+
+
+
+<div class="modal fade" id="a" tabindex="-1" role="dialog" aira-labelledby="aModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="card" data-toggle="modal" data-target="#a">
+      <img class="card-img-top" src="">
+      <div class="card-body">
+        <h5 class="card-title">숫자야구</h5>
+
+        <p>보드게임 숫자야구를 모바일로 제작</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="b" tabindex="-1" role="dialog" aira-labelledby="bModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="card" data-toggle="modal" data-target="#">
+      <img class="card-img-top" src="">
+      <div class="card-body">
+        <h5 class="card-title">Django 웹 페이지</h5>
+
+        <p>지금 이 페이지</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="c" tabindex="-1" role="dialog" aira-labelledby="cModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="card" data-toggle="modal" data-target="#">
+      <img class="card-img-top" src="">
+      <div class="card-body">
+        <h5 class="card-title">FLASK 웹 페이지</h5>
+
+        <p>쇼핑몰 사이트를 개발함</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="fixed-bottom">
+  {% include 'blog/footer.html' %}
+</div>
+
 </body>
 </html>
